@@ -6,7 +6,7 @@
 void honouredGuest::display() {
     cout << "购书人姓名:" << name << "\t";
     cout << "购书人编号:" << buyerID << "\t";
-    cout << "购书人为贵宾!折扣率为:" << discount_rate * 100 << "名\n",
+    cout << "购书人为贵宾!折扣率为:" << discount_rate * 100 << "%\n",
             cout << "地址:" << address << "\n\n";
 }
 
