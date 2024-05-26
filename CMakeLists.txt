@@ -15,4 +15,6 @@ add_executable(online main.cpp
         layfolk.cpp
         member.cpp
         member.cpp
-        book.cpp)
+        book.cpp
+        order.h
+        order.cpp)

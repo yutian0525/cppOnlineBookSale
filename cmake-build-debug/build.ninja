@@ -85,6 +85,12 @@ build CMakeFiles/online.dir/member.cpp.obj: CXX_COMPILER__online_unscanned_Debug
   OBJECT_DIR = CMakeFiles\online.dir
   OBJECT_FILE_DIR = CMakeFiles\online.dir
 
+build CMakeFiles/online.dir/order.cpp.obj: CXX_COMPILER__online_unscanned_Debug D$:/work_space/cpp/online/order.cpp || cmake_object_order_depends_target_online
+  DEP_FILE = CMakeFiles\online.dir\order.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\online.dir
+  OBJECT_FILE_DIR = CMakeFiles\online.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target online
@@ -93,7 +99,7 @@ build CMakeFiles/online.dir/member.cpp.obj: CXX_COMPILER__online_unscanned_Debug
 #############################################
 # Link the executable online.exe
 
-build online.exe: CXX_EXECUTABLE_LINKER__online_Debug CMakeFiles/online.dir/main.cpp.obj CMakeFiles/online.dir/layfolk.cpp.obj CMakeFiles/online.dir/buyer.cpp.obj CMakeFiles/online.dir/honouredGuest.cpp.obj CMakeFiles/online.dir/book.cpp.obj CMakeFiles/online.dir/member.cpp.obj
+build online.exe: CXX_EXECUTABLE_LINKER__online_Debug CMakeFiles/online.dir/main.cpp.obj CMakeFiles/online.dir/layfolk.cpp.obj CMakeFiles/online.dir/buyer.cpp.obj CMakeFiles/online.dir/honouredGuest.cpp.obj CMakeFiles/online.dir/book.cpp.obj CMakeFiles/online.dir/member.cpp.obj CMakeFiles/online.dir/order.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\online.dir
