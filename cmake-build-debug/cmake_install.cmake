@@ -1,4 +1,4 @@
-# Install script for directory: D:/work_space/cpp/online
+# Install script for directory: D:/work_space/cpp/cppOnlineBookSale
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/work_space/cpp/online/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/work_space/cpp/cppOnlineBookSale/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

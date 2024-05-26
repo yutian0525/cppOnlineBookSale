@@ -6,7 +6,9 @@
 #include "honouredGuest.h"
 #include "order.h"
 #include <vector>
+#include <fstream>
 #include <memory>
+#include <sstream>
 
 using namespace std;
 
@@ -75,6 +77,117 @@ void showAllOrders(vector<order *> orders) {
     }
     system("pause");
 }
+void readBuyer(vector<buyer *> &us){
+    ifstream inputFile;
+    stringstream ss;
+    string temp[10];
+    inputFile.open("buyer.txt");
+    if (inputFile.is_open()) {
+        string line;
+        while (getline(inputFile, line)) {
+            ss.clear();
+            ss.str(line);
+            string single;
+            int i = 0;
+            for(i=0;i<10;i++){
+                temp[i] = "";
+            }
+            i = 0;
+            // 按照空格分隔
+            while(getline(ss, single, ' ')){
+                temp[i++] = single.c_str();
+            }
+            if(temp[0] == "layfolk"){
+                us.push_back(new layfolk(temp[1], stoi(temp[2]), temp[3], 0));
+            }
+            if(temp[0] == "honouredGuest"){
+                us.push_back(new honouredGuest(temp[1], stoi(temp[2]), stof(temp[3]), temp[4], 0));
+            }
+            if(temp[0] == "member"){
+                us.push_back(new member(temp[1], stoi(temp[2]), stoi(temp[3]), temp[4], 0));
+            }
+
+        }
+    } else {
+        std::cout << "Failed to open the file." << std::endl; // 如果文件无法打开，输出错误信息
+    }
+
+    inputFile.close();
+}
+void readBook(vector<book *> &books){
+    ifstream inputFile;
+    stringstream ss;
+    string temp[10];
+    inputFile.open("books.txt");
+    if (inputFile.is_open()) {
+        string line;
+        while (getline(inputFile, line)) {
+            ss.clear();
+            ss.str(line);
+            string single;
+            int i = 0;
+            for(i=0;i<10;i++){
+                temp[i] = "";
+            }
+            i = 0;
+            // 按照空格分隔
+            while(getline(ss, single, ' ')){
+                temp[i++] = single.c_str();
+            }
+            books.push_back(new book(temp[0], temp[1], temp[2], temp[3], stof(temp[4])));
+        }
+    } else {
+        std::cout << "Failed to open the file." << std::endl; // 如果文件无法打开，输出错误信息
+    }
+
+    inputFile.close();
+}
+void readOrder(vector<order *> &orders){
+    ifstream inputFile;
+    stringstream ss;
+    string temp[10];
+    inputFile.open("orders.txt");
+    if (inputFile.is_open()) {
+        string line;
+        while (getline(inputFile, line)) {
+            ss.clear();
+            ss.str(line);
+            string single;
+            int i = 0;
+            for(i=0;i<10;i++){
+                temp[i] = "";
+            }
+            i = 0;
+            // 按照空格分隔
+            while(getline(ss, single, ' ')){
+                temp[i++] = single.c_str();
+            }
+            order *tt = new order(stoi(temp[1]), stoi(temp[2]), stoi(temp[0]));
+            for(int i=4;i<stoi(temp[3])+4;i++){
+                tt->addbook(temp[i]);
+            }
+            orders.push_back(tt);
+
+        }
+    } else {
+        std::cout << "Failed to open the file." << std::endl; // 如果文件无法打开，输出错误信息
+    }
+
+    inputFile.close();
+}
+void saveOrder(vector<order *> orders){
+    ofstream outputFile;
+    outputFile.open("orders.txt", ios::trunc);
+    if (outputFile.is_open()) {
+        for (order *o: orders) {
+            outputFile << o->getid() << " " << o->getbuyerid()<< " " << o->getprice()<<" "<<o->getlistcount()<< o->getlist() << endl;
+        }
+    } else {
+        std::cout << "Failed to open the file." << std::endl; // 如果文件无法打开，输出错误信息
+    }
+
+    outputFile.close();
+}
 
 int main() {
     vector<buyer *> users;
@@ -83,12 +196,9 @@ int main() {
     vector<order *> orders;
 
 
-    users.push_back(new layfolk("林小荼", 1, "北京", 0));
-    users.push_back(new honouredGuest("王遥遥", 2, .6, "上海", 0));
-    users.push_back(new member("赵红艳", 3, 5, "广州", 0));
-
-    books.push_back(new book("7-302-04504-6", "C++程序设计", "谭强", "清华", 25));
-    books.push_back(new book("7-402-03388-9", "数据结构", "许卓群", "北大", 20));
+    readBuyer(users);
+    readBook(books);
+    readOrder(orders);
 
     buyer *onloadUser;
     int mainMenu = 1,addMenu = 0, chooseFunction,chooseaf;
@@ -160,7 +270,7 @@ int main() {
                 break;
         }
     }
-
+    saveOrder(orders);
 
     for (buyer *us: users) {
         delete us;
