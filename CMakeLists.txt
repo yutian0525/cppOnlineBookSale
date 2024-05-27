@@ -17,4 +17,14 @@ add_executable(online main.cpp
         member.cpp
         book.cpp
         order.h
-        order.cpp)
+        order.cpp
+        Box.h
+        Box.cpp
+        buyerBox.cpp
+        buyerBox.h
+        booksBox.cpp
+        booksBox.h
+        ordersBox.cpp
+        ordersBox.h
+        mybooklistBox.cpp
+        mybooklistBox.h)

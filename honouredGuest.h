@@ -11,7 +11,8 @@ class honouredGuest : public buyer {
 //折扣率
     double discount_rate;
 public:
-    honouredGuest(string n, int b, double r, string a, double p) : buyer(n, b, a, p)
+    honouredGuest(string n, int b, double r, string a, double p) :
+    buyer(n, b, a, p)
 //构造函数
     { discount_rate = r; }
 

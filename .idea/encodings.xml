@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/Box.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/Box.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/book.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/book.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/booksBox.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/booksBox.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/buyer.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/buyer.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/buyerBox.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/buyerBox.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cmake-build-debug/books.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cmake-build-debug/buyer.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cmake-build-debug/orders.txt" charset="GBK" />
@@ -15,8 +21,12 @@
     <file url="file://$PROJECT_DIR$/main.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/member.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/member.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/mybooklistBox.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/mybooklistBox.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/order.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/order.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ordersBox.cpp" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/ordersBox.h" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

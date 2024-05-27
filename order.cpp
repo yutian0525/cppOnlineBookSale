@@ -9,6 +9,8 @@ order::order(int bi,int p) {
     listcount = 0;
     price = p;
 }
+order::order() {
+}
 void order::addbook(string bookname) {
     orderlist[listcount] = bookname;
     listcount++;

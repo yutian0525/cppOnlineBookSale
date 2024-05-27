@@ -9,7 +9,8 @@
 class layfolk : public buyer {
 public:
 //普通人类
-    layfolk(string n, int b, string a, double p) : buyer(n, b, a, p) {}
+    layfolk(string n, int b, string a, double p) :
+    buyer(n, b, a, p) {}
 
 //构造函数
     void display();
