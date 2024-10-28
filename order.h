@@ -18,7 +18,13 @@ private:
 public:
     order();
     order(int bi,int p);
+    order(int bi,int p,int id);
     void addbook(string bookname);
     void print();
+    int getid();
+    int getprice();
+    int getbuyerid();
+    int getlistcount();
+    string getlist();
 };
 #endif //ONLINE_ORDER_H

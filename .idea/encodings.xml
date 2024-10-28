@@ -5,6 +5,9 @@
     <file url="file://$PROJECT_DIR$/book.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/buyer.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/buyer.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cmake-build-debug/books.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cmake-build-debug/buyer.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cmake-build-debug/orders.txt" charset="GBK" />
     <file url="file://$PROJECT_DIR$/honouredGuest.cpp" charset="GBK" />
     <file url="file://$PROJECT_DIR$/honouredGuest.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/layfolk.cpp" charset="GBK" />
